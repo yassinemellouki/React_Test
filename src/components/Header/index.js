@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Title from "./title";
 
-class Index extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
   }
@@ -15,4 +15,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Header;

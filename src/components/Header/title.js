@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class Title extends Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Title extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <React.Fragment>
         <h2>Hello form header</h2>
@@ -14,4 +16,8 @@ class Title extends Component {
   }
 }
 
-export default Title;
+function mapStateToProps(state) {
+  return { state };
+}
+
+export default connect(mapStateToProps)(Title);
