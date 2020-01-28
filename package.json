@@ -6,8 +6,9 @@
   "scripts": {
     "build": "npm run clean && webpack --mode production",
     "clean": "rimraf public",
-    "dev": "webpack --mode development",
-    "live": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "json-server": "json-server --watch src/API/jsonData.json",
+    "live-dev": "npm run json-server & npm run dev"
   },
   "author": "Yassine Mellouki",
   "license": "ISC",
@@ -42,6 +43,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

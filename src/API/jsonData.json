@@ -1,0 +1,86 @@
+{
+  "resume": {
+    "name": "Yassine Mellouki",
+    "speciality": "Front-End web developer",
+    "about": " I'm Yassine Mellouki 23 years old, I'm a Front-End Web Developer. I worked on variety of Front-End projects (Portfolios, Real Estate, Tech .). My goal is mastering React and Redux and having a good knowledge with back-end & DevOps technologies (php, MySQL, laravel, linux, docker, jenkins .).",
+    "contact": [
+      {
+        "name": "phone",
+        "value": "+212671815573"
+      },
+      {
+        "name": "email",
+        "value": "yassinemellouki4@gmail.com"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Baccalaureate",
+        "school": "HIGH SCHOOL SIDI LHAJ LHBIB"
+      },
+      {
+        "degree": "Web Development",
+        "school": "Self Study"
+      }
+    ],
+    "languages": ["English", "Arabic"],
+    "experience": [
+      {
+        "job": "FREELANCER",
+        "at": "MOJO Marketplace",
+        "from": "2017",
+        "to": "2018"
+      },
+      {
+        "job": "Front End Web Developer",
+        "at": "GIZMO FACTORY",
+        "from": "2018",
+        "to": "2019"
+      },
+      {
+        "job": "Freelancer",
+        "at": "Envato Themeforest",
+        "from": "2019",
+        "to": "present"
+      }
+    ],
+    "skills": [
+      {
+        "filed": "web Development",
+        "skills": [
+          {
+            "type": "languages",
+            "list": ["HTML5", "CSS3", "JAVASCRIPT/ES6"]
+          },
+          {
+            "type": "Framworks & Libraries",
+            "list": ["BOOTSTRAP", "REACT/REDUX"]
+          },
+          {
+            "type": "Tools",
+            "list": ["WEBPACK (BUNDLER)", "GIT"]
+          }
+        ]
+      },
+      {
+        "filed": "desing",
+        "skills": [
+          {
+            "type": "Tools",
+            "list": [
+              "Adobe photoshop",
+              "Adobe illustrator",
+              "Figma",
+              "invision"
+            ]
+          }
+        ]
+      },
+      {
+        "filed": "others",
+        "list": ["Adobe photoshop", "Adobe illustrator", "Figma", "invision"]
+      }
+    ],
+    "interests": ["coding", "reading", "listening to music", "watching Youtube"]
+  }
+}

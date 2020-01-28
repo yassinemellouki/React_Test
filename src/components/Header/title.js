@@ -7,7 +7,6 @@ class Title extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <React.Fragment>
         <h2>Hello form header</h2>
