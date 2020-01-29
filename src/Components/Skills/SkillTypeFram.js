@@ -9,10 +9,24 @@ class SkillTypeFram extends Component {
         <Field
           name="Web Development"
           data={[
-            { type: "languages", list: ["HTML5", "CSS3", "JAVASCRIPT/ES6"] }
+            { type: "languages", list: ["HTML5", "CSS3", "JAVASCRIPT/ES6"] },
+            {
+              type: "FRAMWORKS & LIBRARIES",
+              list: ["Bootstrap", "React/Redux"]
+            },
+            { type: "TOOLS", list: ["Webpack (bundler)", "GIT"] }
           ]}
         />
-        <Others />
+        <Field
+          name="Desing"
+          data={[
+            {
+              type: "Tools",
+              list: ["Abobe Photosop", "Adobe illustrator", "Figma", "Invision"]
+            }
+          ]}
+        />
+        <Others list={["vim", "Docker", "Linux"]} />
       </React.Fragment>
     );
   }

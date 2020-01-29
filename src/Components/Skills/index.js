@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SkillTypeFram from "./SkillTypeFram";
-import Others from "./Others";
 
 class Experiences extends Component {
   render() {

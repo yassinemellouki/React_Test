@@ -26,7 +26,7 @@
     "languages": ["English", "Arabic"],
     "experience": [
       {
-        "job": "FREELANCER",
+        "job": "freelancer",
         "at": "MOJO Marketplace",
         "from": "2017",
         "to": "2018",
@@ -60,7 +60,7 @@
           },
           {
             "type": "Tools",
-            "list": ["WEBPACK (BUNDLER)", "GIT"]
+            "list": ["Webpack (BUNDLER)", "GIT"]
           }
         ]
       },
@@ -80,9 +80,14 @@
       },
       {
         "filed": "others",
-        "list": ["Adobe photoshop", "Adobe illustrator", "Figma", "invision"]
+        "list": ["VIM", "Docker", "Linux"]
       }
     ],
-    "interests": ["coding", "reading", "listening to music", "watching Youtube"]
+    "interests": [
+      "coding",
+      "learning",
+      "listening to music",
+      "watching Youtube"
+    ]
   }
 }
