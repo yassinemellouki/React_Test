@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DegreeDetail from "./degreeDetail";
-import Lang from "./lang";
+import DegreeDetail from "./DegreeDetail";
+import Lang from "./Lang";
 
 class About extends Component {
   constructor(props) {

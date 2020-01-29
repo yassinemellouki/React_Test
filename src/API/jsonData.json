@@ -29,13 +29,15 @@
         "job": "FREELANCER",
         "at": "MOJO Marketplace",
         "from": "2017",
-        "to": "2018"
+        "to": "2018",
+        "details": "3 projects are accepted. One is a coming soon web page, the others are a personal Portfolio templates with different styles"
       },
       {
         "job": "Front End Web Developer",
         "at": "GIZMO FACTORY",
         "from": "2018",
-        "to": "2019"
+        "to": "2019",
+        "details": "3 websites ( front-end  ) using html5, css3 , SVG, and javascript. These projects are compatible with all browsers included ie11. Also, I had a chance to build a chrome Extension. Moreover working with 'laravel' project (adding pages and fixing Issues)."
       },
       {
         "job": "Freelancer",
