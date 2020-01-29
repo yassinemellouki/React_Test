@@ -6,17 +6,34 @@ import { fetchData } from "./redux/actions/resumeActions";
 import PropTypes from "prop-types";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fetched: null
+    };
+  }
+
   componentDidMount() {
     let { dispatch } = this.props;
-    axios.get("http://localhost:3000/resume").then(res => {
-      dispatch(fetchData(res.data));
-    });
+    axios
+      .get("http://localhost:3000/resume")
+      .then(res => {
+        dispatch(fetchData(res.data));
+        this.setState({ fetched: true });
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
   render() {
     return (
       <React.Fragment>
-        <Components />
+        {this.state.fetched ? (
+          <Components />
+        ) : (
+          <h1>Error while fetching data</h1>
+        )}
       </React.Fragment>
     );
   }

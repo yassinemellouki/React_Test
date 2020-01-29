@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import DegreeDetail from "./DegreeDetail";
 import Lang from "./Lang";
+import PropTypes from "prop-types";
 
 class About extends Component {
   constructor(props) {
@@ -8,6 +10,8 @@ class About extends Component {
   }
 
   render() {
+    let { state } = this.props;
+    let { education, languages } = state.resume;
     return (
       <div className="education-wrapper left-side-section last-section">
         <div className="education-section">
@@ -15,11 +19,13 @@ class About extends Component {
             <h3>Education</h3>
           </div>
           <div className="details">
-            <DegreeDetail
-              degree="Baccaureate"
-              school="HIGH SCHOOL SIDI LHAJ LHBIB "
-            />
-            <DegreeDetail degree="Web Development" school="Self Study" />
+            {education.map((education, index) => (
+              <DegreeDetail
+                key={index}
+                degree={education.degree}
+                school={education.school}
+              />
+            ))}
           </div>
         </div>
         <div className="langs-section">
@@ -27,8 +33,9 @@ class About extends Component {
             <h3>Language</h3>
           </div>
           <div className="details">
-            <Lang lang="English" />
-            <Lang lang="French" />
+            {languages.map((lang, index) => (
+              <Lang key={index} lang={lang} />
+            ))}
           </div>
         </div>
       </div>
@@ -36,4 +43,12 @@ class About extends Component {
   }
 }
 
-export default About;
+About.propTypes = {
+  state: PropTypes.object
+};
+
+function mapStateToProps(state) {
+  return { state };
+}
+
+export default connect(mapStateToProps)(About);

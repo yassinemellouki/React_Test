@@ -5,6 +5,7 @@ import SkillType from "./SkillType";
 class Skill extends Component {
   render() {
     let { name, data } = this.props;
+    console.log(this.props);
     return (
       <div className="skill col-md-6">
         <div className="title">

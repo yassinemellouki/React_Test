@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 class About extends Component {
   constructor(props) {
@@ -6,6 +8,8 @@ class About extends Component {
   }
 
   render() {
+    let { state } = this.props;
+    let { resume } = state;
     return (
       <div className="about-wrapper left-side-section">
         <div className="about-section">
@@ -13,12 +17,7 @@ class About extends Component {
             <h3>About Me</h3>
           </div>
           <div className="details">
-            <p>
-              Consectetur debitis culpa perferendis molestias iste Saepe maxime
-              mollitia laudantium aliquam debitis sed! Architecto nulla magni
-              aut magnam corporis. Blanditiis nulla laborum porro error eos.
-              Reprehenderit voluptatibus sapiente est facere?
-            </p>
+            <p>{resume.about}</p>
           </div>
         </div>
       </div>
@@ -26,4 +25,12 @@ class About extends Component {
   }
 }
 
-export default About;
+About.propTypes = {
+  state: PropTypes.object
+};
+
+function mapStateToProps(state) {
+  return { state };
+}
+
+export default connect(mapStateToProps)(About);

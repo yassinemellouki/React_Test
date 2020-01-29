@@ -9,7 +9,7 @@ class Title extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Hello form header</h2>
+        <h1>My React CV</h1>
       </React.Fragment>
     );
   }
