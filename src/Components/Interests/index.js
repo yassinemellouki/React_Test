@@ -1,21 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Card, CardHeader, CardBody } from "../Card";
 
 class Interests extends Component {
   render() {
     let { interests } = this.props;
     return (
       <div className="interests left-side-section">
-        <div className="title">
-          <h2>Interested In</h2>
-        </div>
-        <div className="interests-list">
-          <ul>
-            {interests.map((interest, index) => (
-              <li key={index}> {interest}</li>
-            ))}
-          </ul>
-        </div>
+        <Card>
+          <CardHeader>
+            <div className="title">
+              <h2>Interested In</h2>
+            </div>
+          </CardHeader>
+          <CardBody>
+            <div className="interests-list">
+              <ul>
+                {interests.map((interest, index) => (
+                  <li key={index}> {interest}</li>
+                ))}
+              </ul>
+            </div>
+          </CardBody>
+        </Card>
       </div>
     );
   }

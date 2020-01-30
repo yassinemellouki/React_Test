@@ -19,6 +19,7 @@ class Card extends Component {
     this.setState({ toggle: !this.state.toggle, first_toggled: true });
   }
   render() {
+    console.log(this.props.children[1]._owner.key);
     let propedChildrens = this.props.children.map((child, index) => {
       if (child.type.name === "CardHeader") {
         return React.cloneElement(child, {
