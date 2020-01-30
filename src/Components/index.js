@@ -11,6 +11,14 @@ import Interests from "./Interests";
 import Footer from "./Footer";
 
 class Components extends Component {
+  componentDidMount() {
+    // Sign default Hight of .card-body Elements
+    let collaps_bodies = document.querySelectorAll(".card-body");
+    collaps_bodies.forEach(collaps_body => {
+      let default_height = collaps_body.offsetHeight;
+      collaps_body.style.height = default_height + "px";
+    });
+  }
   render() {
     let { state } = this.props;
     let { name, speciality, interests, contact } = state.resume;
