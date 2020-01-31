@@ -1,0 +1,30 @@
+footer {
+  background-color: $light-green;
+  color: $white;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  ul {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    margin: 0;
+    background: none;
+    list-style: none;
+    width: 100%;
+
+    li {
+      float: left;
+      width: 50%;
+      text-align: center;
+
+      img {
+        width: 1rem;
+      }
+    }
+  }
+}

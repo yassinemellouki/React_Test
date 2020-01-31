@@ -24,8 +24,10 @@ class Components extends Component {
     let { name, speciality, interests, contact } = state.resume;
     return (
       <React.Fragment>
-        <div className="container">
+        <div className="container-fuild">
           <Header />
+        </div>
+        <div className="container">
           <div className="row">
             <div className="col-md-4">
               <About />
@@ -39,7 +41,9 @@ class Components extends Component {
             </div>
           </div>
         </div>
-        <Footer contact={[...contact]} />
+        <div className="container-fuild">
+          <Footer contact={[...contact]} />
+        </div>
       </React.Fragment>
     );
   }

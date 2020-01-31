@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Title from "./Title";
 
 class Header extends Component {
   constructor(props) {
@@ -7,11 +6,7 @@ class Header extends Component {
   }
 
   render() {
-    return (
-      <header>
-        <Title />
-      </header>
-    );
+    return <header className="mb-5"></header>;
   }
 }
 
