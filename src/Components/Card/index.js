@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArrowIcon from "../../img/icons/arrow.svg";
 import PropTypes from "prop-types";
 
 class Card extends Component {
@@ -47,9 +48,17 @@ class CardHeader extends Component {
     super(props);
   }
   render() {
+    let { toggle } = this.props;
     return (
       <div className="card-header" onClick={this.props.handleToggle}>
         {this.props.children}
+        <div className="arrow-icon">
+          <img
+            className={`arrow-icon icon-${toggle ? "down" : "up"}`}
+            src={ArrowIcon}
+            alt="arrow icon"
+          />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,25 @@
+.card-header {
+  background-color: darken($main-col, 10);
+  position: relative;
+
+  .header {
+    display: inline-block;
+  }
+
+  .time {
+    span {
+      letter-spacing: 0.1rem;
+      font: {
+        size: 0.9rem;
+        weight: 300;
+      }
+    }
+  }
+
+  .arrow-icon {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.5rem;
+    width: 1.2rem;
+  }
+}

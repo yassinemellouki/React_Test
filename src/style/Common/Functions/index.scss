@@ -1,12 +1,3 @@
-/**
-* Convert font-size from px to rem with px fallback
-*
-* @param $size - the value in pixel you want to convert
-*
-* e.g. p {@include fontSize(12px);}
-*
-*/
-
 // Function for converting a px based font-size to rem.
 
 @function calculate_rem($size) {
@@ -18,4 +9,21 @@
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin calculate_rem($size) {
   size: calculate_rem($size);
+}
+
+// Line separation style
+
+@mixin line-separation($bg-color, $left-move) {
+  background-color: $bg-color;
+  position: relative;
+  left: $left-move;
+  width: calc(100% + 2rem);
+
+  &::after {
+    content: "";
+    width: 20%;
+    height: 0.3rem;
+    display: block;
+    background-color: $bg-color;
+  }
 }

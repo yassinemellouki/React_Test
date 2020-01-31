@@ -1,0 +1,8 @@
+.card {
+  background-color: lighten($main-col, 5);
+  color: white;
+  margin-bottom: 0.2rem;
+
+  @import "./Header";
+  @import "./Body";
+}

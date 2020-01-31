@@ -1,0 +1,23 @@
+.experiences-list {
+  .work-experiences {
+    .header {
+      text-transform: uppercase;
+    }
+
+    .details {
+      .at {
+        color: rgba($sec-col, 0.8);
+      }
+
+      .detail {
+        p {
+          letter-spacing: 0.08rem;
+          font: {
+            weight: 300;
+            size: calculate_rem(14px);
+          }
+        }
+      }
+    }
+  }
+}

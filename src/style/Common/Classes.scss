@@ -1,0 +1,45 @@
+a {
+  &:focus,
+  &:hover,
+  &:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  color: white;
+  text-decoration: none;
+}
+
+.main-col {
+  color: $main-col;
+}
+
+.sec-col {
+  color: $sec-col;
+}
+
+.main-bg {
+  background-color: $main-col;
+}
+
+.second-bg {
+  background-color: $light-gray;
+}
+
+.icon-down {
+  transform: rotate(180deg);
+}
+
+.icon-up {
+  transform: rotate(0);
+}
+
+.main-line-separation {
+  @include line-separation($main-col, -2rem);
+}
+
+.second-line-separation {
+  margin-top: 0;
+
+  @include line-separation($sec-col, 0);
+}

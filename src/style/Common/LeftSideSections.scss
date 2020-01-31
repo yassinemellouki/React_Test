@@ -1,0 +1,33 @@
+.left-section {
+  text-align: center;
+
+  .title {
+    display: inline-block;
+
+    h3 {
+      &::after {
+        content: "";
+        display: block;
+        margin: auto;
+        margin-top: 0.3rem;
+        height: 0.15rem;
+        width: 40%;
+      }
+    }
+  }
+
+  .wrapper-section {
+    > .title {
+      color: $sec-col;
+
+      h2,
+      h3 {
+        text-transform: uppercase;
+        font: {
+          size: calculate_rem(24px);
+          weight: bold;
+        }
+      }
+    }
+  }
+}

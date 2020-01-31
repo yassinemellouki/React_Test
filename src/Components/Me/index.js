@@ -36,7 +36,7 @@ class Me extends Component {
       return { __html: html_name };
     }
     return (
-      <div className="my-info">
+      <div className="who-am-i mb-4">
         <div className="my-name">
           <h1 dangerouslySetInnerHTML={NewComponent()}></h1>
         </div>

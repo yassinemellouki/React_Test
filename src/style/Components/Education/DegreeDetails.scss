@@ -1,6 +1,12 @@
 .degree-detail {
+  .degree {
+    display: block;
+  }
+
   .school {
-    width: calculate_rem(150px);
+    margin: auto;
+    display: block;
+    max-width: calculate_rem(150px);
     color: $lighten-second-color;
     font: {
       size: 0.8rem;

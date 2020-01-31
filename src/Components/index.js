@@ -35,6 +35,7 @@ class Components extends Component {
             </div>
             <div className="col-md-8 right-section">
               <Me name={name} specification={speciality} />
+              <hr className="main-line-separation" />
               <Experiences />
               <Skills />
               <Interests interests={[...interests]} />

@@ -6,18 +6,20 @@ class Experience extends Component {
   render() {
     let { job, at, from, to, detail, index } = this.props;
     return (
-      <div className="experiences wrapper-section">
+      <div className="work-experiences wrapper-section">
         <Card toggle={index == 0 ? true : false}>
           <CardHeader>
-            <div className="header"> {job}</div>
+            <div className="header pt-2 float-left"> {job} </div>
+            <div className="time my-2 float-right mr-5">
+              <span className="form">{from}</span>
+              <span className="mx-1">-</span>
+              <span className="to">{to}</span>
+            </div>
           </CardHeader>
           <CardBody>
-            <div className="details">
-              <div className="at">{at}</div>
-              <div className="time">
-                <span className="form">{from}</span>
-                <span className="to">{to}</span>
-              </div>
+            <div className="details p-3">
+              <div className="at my-1">{at}</div>
+
               <div className="detail">
                 <p>{detail}</p>
               </div>
