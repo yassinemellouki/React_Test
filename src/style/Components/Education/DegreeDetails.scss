@@ -1,0 +1,9 @@
+.degree-detail {
+  .school {
+    width: calculate_rem(150px);
+    color: $lighten-second-color;
+    font: {
+      size: 0.8rem;
+    }
+  }
+}

@@ -11,14 +11,12 @@ class About extends Component {
     let { state } = this.props;
     let { resume } = state;
     return (
-      <div className="about-wrapper left-side-section">
-        <div className="about-section">
-          <div className="title">
-            <h3>About Me</h3>
-          </div>
-          <div className="details">
-            <p>{resume.about}</p>
-          </div>
+      <div className="about-section wrapper-section main-bg mb-5">
+        <div className="title pt-4">
+          <h3>About Me</h3>
+        </div>
+        <div className="details mx-auto py-4">
+          <p>{resume.about}</p>
         </div>
       </div>
     );

@@ -5,8 +5,8 @@ class DegreeDetail extends Component {
   render() {
     const { degree, school } = this.props;
     return (
-      <div className="degree-detail">
-        <h4 className="degree">{degree}</h4>
+      <div className="degree-detail mb-4">
+        <h5 className="degree title main-col">{degree}</h5>
         <span className="school">{school}</span>
       </div>
     );

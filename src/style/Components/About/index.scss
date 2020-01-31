@@ -1,0 +1,25 @@
+.about-section {
+  color: $white;
+
+  .title {
+    h3 {
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+
+  .details {
+    max-width: calculate_rem(300px);
+
+    p {
+      font: {
+        @include calculate_rem(14px);
+        weight: 300;
+      }
+
+      line-height: 1.5rem;
+      letter-spacing: 0.05rem;
+    }
+  }
+}

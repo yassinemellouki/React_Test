@@ -1,0 +1,14 @@
+.education-wrapper {
+  h3 {
+    &::after {
+      background-color: $main-col;
+    }
+  }
+
+  span {
+    color: $lighten-second-color;
+  }
+
+  @import "./DegreeDetails";
+  //@import "./Lang";
+}

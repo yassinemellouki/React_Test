@@ -29,11 +29,11 @@ class Components extends Component {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 left-section">
               <About />
               <Education />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-8 right-section">
               <Me name={name} specification={speciality} />
               <Experiences />
               <Skills />

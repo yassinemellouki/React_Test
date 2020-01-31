@@ -1,0 +1,71 @@
+@import "./Variables/colors";
+@import "./Functions";
+@import "./Card.scss";
+
+body {
+  font: {
+    family: "Montserrat", sans-serif;
+  }
+}
+
+a {
+  &:focus,
+  &:hover,
+  &:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  color: white;
+  text-decoration: none;
+}
+
+.main-col {
+  color: $main-col;
+}
+
+.sec-col {
+  color: $sec-col;
+}
+
+.main-bg {
+  background-color: $main-col;
+}
+
+.second-bg {
+  background-color: $light-gray;
+}
+
+.left-section {
+  text-align: center;
+}
+
+.left-section,
+.wrapper-section {
+  .title {
+    h3 {
+      &::after {
+        content: "";
+        display: block;
+        margin: auto;
+        margin-top: 0.3rem;
+        height: 0.15rem;
+        width: 40%;
+      }
+    }
+  }
+
+  .wrapper-section {
+    > .title {
+      color: $sec-col;
+
+      h2,
+      h3 {
+        font: {
+          size: 1.8rem;
+          weight: bold;
+        }
+      }
+    }
+  }
+}

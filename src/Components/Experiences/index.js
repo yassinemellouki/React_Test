@@ -8,7 +8,7 @@ class Experiences extends Component {
     let { state } = this.props;
     let { experience } = state.resume;
     return (
-      <div className="experiences left-side-section">
+      <div className="experiences wrapper-section">
         <div className="title">
           <h2>Work Experiences</h2>
         </div>

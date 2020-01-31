@@ -1,12 +1,15 @@
 .card {
-  background-color: $light-green;
+  background-color: $main-col;
   color: white;
+
   .card-body {
     padding: 0;
     overflow: hidden;
+
     .collapsing {
       transition: height 0.5s ease;
     }
+
     &.hide {
       height: 0 !important;
     }

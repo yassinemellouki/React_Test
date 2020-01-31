@@ -13,9 +13,9 @@ class About extends Component {
     let { state } = this.props;
     let { education, languages } = state.resume;
     return (
-      <div className="education-wrapper left-side-section last-section">
-        <div className="education-section">
-          <div className="title">
+      <div className="education-wrapper section-wrapper second-bg pt-2 pb-5">
+        <div className="education-section wrapper-section mb-3">
+          <div className="title py-3">
             <h3>Education</h3>
           </div>
           <div className="details">
@@ -28,8 +28,8 @@ class About extends Component {
             ))}
           </div>
         </div>
-        <div className="langs-section">
-          <div className="title">
+        <div className="langs-section wrapper-section mb-2">
+          <div className="title py-3">
             <h3>Language</h3>
           </div>
           <div className="details">

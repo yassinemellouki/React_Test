@@ -5,10 +5,8 @@ import { Card, CardHeader, CardBody } from "../Card";
 class Experience extends Component {
   render() {
     let { job, at, from, to, detail, index } = this.props;
-    console.log("index");
-    console.log(index);
     return (
-      <div className="experiences left-side-section">
+      <div className="experiences wrapper-section">
         <Card toggle={index == 0 ? true : false}>
           <CardHeader>
             <div className="header"> {job}</div>
@@ -37,7 +35,8 @@ Experience.propTypes = {
   from: PropTypes.string,
   to: PropTypes.string,
   detail: PropTypes.string,
-  toggle: PropTypes.bool
+  toggle: PropTypes.bool,
+  index: PropTypes.number
 };
 
 export default Experience;
