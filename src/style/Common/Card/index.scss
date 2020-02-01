@@ -1,8 +1,21 @@
 .card {
-  background-color: lighten($main-col, 5);
+  border-radius: 0 !important;
   color: white;
   margin-bottom: 0.2rem;
 
-  @import "./Header";
-  @import "./Body";
+  @import "./Common/";
+
+  &.card-dark,
+  &.card-default {
+    background-color: lighten($main-col, 5);
+
+    @import "./Dark/";
+  }
+
+  &.card-light {
+    background-color: $white;
+    color: inherit;
+
+    @import "./Light/";
+  }
 }

@@ -1,6 +1,7 @@
 .card-header {
-  background-color: darken($main-col, 10);
   position: relative;
+  cursor: pointer;
+  border-radius: 0 !important;
 
   .header {
     display: inline-block;
@@ -19,7 +20,7 @@
   .arrow-icon {
     position: absolute;
     right: 0.8rem;
-    top: 0.5rem;
+    top: 0.7rem;
     width: 1.2rem;
   }
 }

@@ -1,0 +1,16 @@
+.card-body {
+  padding: 0;
+  overflow: hidden;
+
+  .collapsing {
+    transition: all 0.5s ease;
+  }
+
+  &.hide {
+    height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

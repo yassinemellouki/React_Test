@@ -1,0 +1,39 @@
+.skills {
+  .skills-list {
+    .list {
+      ul {
+        list-style: none;
+        padding-right: 0.8rem;
+        font: {
+          size: calculate_rem(14px);
+        }
+
+        li {
+          padding-bottom: 0.6rem;
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+
+    .field-title {
+      img {
+        width: 2.2rem;
+      }
+
+      color: $main-col;
+    }
+
+    .filed {
+      .title {
+        text-transform: uppercase !important;
+        font: {
+          size: calculate_rem(15px);
+        }
+      }
+    }
+
+    .others {
+      //empty
+    }
+  }
+}

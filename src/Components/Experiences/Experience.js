@@ -7,7 +7,7 @@ class Experience extends Component {
     let { job, at, from, to, detail, index } = this.props;
     return (
       <div className="work-experiences wrapper-section">
-        <Card toggle={index == 0 ? true : false}>
+        <Card cardStyle="dark" toggle={index == 0 ? true : false}>
           <CardHeader>
             <div className="header pt-2 float-left"> {job} </div>
             <div className="time my-2 float-right mr-5">

@@ -14,7 +14,7 @@ class Interests extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <div className="interests-list">
+            <div className="interests-list mt-3">
               <ul>
                 {interests.map((interest, index) => (
                   <li key={index}> {interest}</li>
