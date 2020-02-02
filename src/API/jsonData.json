@@ -52,15 +52,26 @@
         "skills": [
           {
             "type": "languages",
-            "list": ["HTML5", "CSS3", "JAVASCRIPT/ES6"]
+            "list": [
+              { "name": "HTML5", "level": "4" },
+              { "name": "CSS3", "level": "4" },
+              { "name": "SASS", "level": "3" },
+              { "name": "JAVASCRIPT", "level": "3.5" }
+            ]
           },
           {
             "type": "Framworks & Libraries",
-            "list": ["BOOTSTRAP", "REACT/REDUX"]
+            "list": [
+              { "name": "BOOTSTRAP", "level": "4" },
+              { "name": "REACT/REDUX", "level": "3.5" }
+            ]
           },
           {
             "type": "Tools",
-            "list": ["Webpack (BUNDLER)", "GIT"]
+            "list": [
+              { "name": "Webpack (BUNDLER)", "level": "3.5" },
+              { "name": "GIT", "level": "3" }
+            ]
           }
         ]
       },
@@ -70,17 +81,21 @@
           {
             "type": "Tools",
             "list": [
-              "Adobe photoshop",
-              "Adobe illustrator",
-              "Figma",
-              "invision"
+              { "name": "Adobe photoshop", "level": "4" },
+              { "name": "Adobe Illustrator", "level": "3.5" },
+              { "name": "Figma", "level": "3" },
+              { "name": "inVision", "level": "2" }
             ]
           }
         ]
       },
       {
         "filed": "others",
-        "list": ["VIM", "Docker", "Linux"]
+        "list": [
+          { "name": "VIM", "level": "2" },
+          { "name": "Docker", "level": "2" },
+          { "name": "Linux", "level": "2" }
+        ]
       }
     ],
     "interests": [

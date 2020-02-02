@@ -2,23 +2,45 @@ import React, { Component } from "react";
 import ArrowIconDark from "../../img/icons/arrow-dark.svg";
 import ArrowIconLight from "../../img/icons/arrow-light.svg";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { addCard, cardToggle } from "../../redux/actions/appActions.js";
+import uuid from "uuid";
 
 class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
       first_toggled: false,
-      toggle: true
+      toggle: true,
+      id: uuid()
     };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ toggle: this.props.toggle });
+    let { dispatch } = this.props;
+    let { id, toggle } = this.state;
+    dispatch(addCard({ id: id, toggle: toggle }));
+    dispatch(cardToggle({ id: id, toggle: this.props.toggle }));
   }
 
-  handleToggle() {
-    this.setState({ toggle: !this.state.toggle, first_toggled: true });
+  componentDidUpdate() {
+    let { cards } = this.props;
+    let { id, toggle } = this.state;
+    let this_card = cards.filter(card => card.id == id);
+    this_card = this_card[0];
+    if (toggle != this_card.toggle) {
+      this.setState({ toggle: this_card.toggle });
+    }
+  }
+
+  handleToggle(id) {
+    let { cards, dispatch } = this.props;
+    let this_card = cards.filter(card => card.id == id);
+    this_card = this_card[0];
+    this_card.toggle = !this_card.toggle;
+    dispatch(cardToggle(this_card));
+    this.setState({ first_toggled: true });
   }
   render() {
     let propedChildrens = this.props.children.map((child, index) => {
@@ -27,7 +49,7 @@ class Card extends Component {
           key: index,
           cardStyle: this.props.cardStyle,
           toggle: this.state.toggle,
-          handleToggle: () => this.handleToggle()
+          handleToggle: () => this.handleToggle(this.state.id)
         });
       } else {
         return React.cloneElement(child, {
@@ -93,6 +115,9 @@ class CardBody extends Component {
 }
 
 Card.propTypes = {
+  dispatch: PropTypes.func,
+  filter: PropTypes.func,
+  cards: PropTypes.array,
   toggle: PropTypes.bool,
   children: PropTypes.array,
   cardStyle: PropTypes.string
@@ -111,4 +136,10 @@ CardBody.propTypes = {
   cardStyle: PropTypes.string
 };
 
-export { Card, CardHeader, CardBody };
+function mapStateToProps(state) {
+  return { cards: state.app.cards };
+}
+
+let Card_Class = connect(mapStateToProps)(Card);
+
+export { Card_Class as Card, CardHeader, CardBody };

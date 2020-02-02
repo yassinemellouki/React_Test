@@ -3,6 +3,7 @@ import Components from "./Components/";
 import { connect } from "react-redux";
 import axios from "axios";
 import { fetchData } from "./redux/actions/resumeActions";
+import { toggle } from "./redux/actions/appActions";
 import PropTypes from "prop-types";
 
 class App extends Component {

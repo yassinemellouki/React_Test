@@ -23,7 +23,7 @@ class Others extends Component {
             <div className="list mt-3">
               <ul>
                 {list.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>{item.name}</li>
                 ))}
               </ul>
             </div>

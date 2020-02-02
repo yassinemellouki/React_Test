@@ -11,6 +11,88 @@
         li {
           padding-bottom: 0.6rem;
           margin-bottom: 0.4rem;
+
+          .star {
+            width: 1rem;
+
+            svg {
+              width: 1rem;
+
+              .star,
+              .star-half,
+              .line {
+                fill: none;
+              }
+            }
+
+            &.animated {
+              &.star-filled {
+                .line {
+                  path {
+                    fill: $white;
+                  }
+
+                  animation: move_lines 0.4s forwards;
+                }
+
+                @keyframes move_lines {
+                  98% {
+                    transform: translate(0);
+                  }
+
+                  100% {
+                    display: none;
+                  }
+                }
+
+                svg {
+                  .star {
+                    fill: $white;
+                  }
+                }
+              }
+
+              &.star-half {
+                .line-3,
+                .line-4,
+                .line-5 {
+                  path {
+                    fill: $white;
+                  }
+
+                  animation: move_lines 0.4s forwards;
+                }
+
+                @keyframes move_lines {
+                  98% {
+                    transform: translate(0);
+                  }
+
+                  100% {
+                    display: none;
+                  }
+                }
+
+                svg {
+                  .star-half {
+                    fill: $white;
+                  }
+                }
+              }
+
+              &.star-not-filled {
+                .line {
+                  display: none;
+                }
+
+                svg {
+                  .star {
+                    fill: rgba($light-gray, 0.5);
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

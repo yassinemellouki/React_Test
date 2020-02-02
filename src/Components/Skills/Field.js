@@ -23,6 +23,7 @@ class Skill extends Component {
             return (
               <SkillType
                 key={index}
+                index={index}
                 type={skill_field.type}
                 list={skill_field.list}
               />
