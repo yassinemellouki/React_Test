@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import Loading from "./Components/Loading/";
 import Components from "./Components/";
 import { connect } from "react-redux";
 import axios from "axios";
 import { fetchData } from "./redux/actions/resumeActions";
-import { toggle } from "./redux/actions/appActions";
 import PropTypes from "prop-types";
 
 class App extends Component {
@@ -30,11 +30,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.fetched ? (
-          <Components />
-        ) : (
-          <h1>Error while fetching data</h1>
-        )}
+        {this.state.fetched ? <Components /> : <Loading />}
       </React.Fragment>
     );
   }

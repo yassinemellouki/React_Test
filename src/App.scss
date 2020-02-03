@@ -1,6 +1,7 @@
 @import "./style/Common";
 
 body {
+  @import "./style/Components/Loading/";
   @import "./style/Components/Header/";
   @import "./style/Components/About/";
   @import "./style/Components/Education/";
