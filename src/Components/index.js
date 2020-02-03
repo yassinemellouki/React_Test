@@ -30,12 +30,16 @@ class Components extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4 left-section">
-              <Me classes="sm-show" name={name} specification={speciality} />
+              <Me
+                classes="d-block d-md-none"
+                name={name}
+                specification={speciality}
+              />
               <About />
               <Education />
             </div>
-            <div className="col-md-8 mt-sm-4 right-section">
-              <Me name={name} classes="sm-hide" specification={speciality} />
+            <div className="col-md-8 mt-0 m-top-4 right-section">
+              <Me name={name} classes="d-md-block" specification={speciality} />
               <hr className="main-line-separation" />
               <Experiences />
               <Skills />
