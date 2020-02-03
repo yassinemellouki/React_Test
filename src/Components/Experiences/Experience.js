@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Card, CardHeader, CardBody } from "../Card";
+import { Card, CardHeader, CardBody } from "../Common/Card";
 
 class Experience extends Component {
   render() {

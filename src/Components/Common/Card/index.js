@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ArrowIconDark from "../../img/icons/arrow-dark.svg";
-import ArrowIconLight from "../../img/icons/arrow-light.svg";
+import ArrowIconDark from "../../../img/icons/arrow-dark.svg";
+import ArrowIconLight from "../../../img/icons/arrow-light.svg";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addCard, cardToggle } from "../../redux/actions/appActions.js";
+import { addCard, cardToggle } from "../../../redux/actions/appActions.js";
 import uuid from "uuid";
 
 class Card extends Component {
@@ -20,10 +20,9 @@ class Card extends Component {
   componentDidMount() {
     let { dispatch } = this.props;
     let { id, toggle } = this.state;
-    if (this.props.toggle) {
-      this.setState({ first_toggled: true });
-    }
+    // Dispatch Card id and the default toggle status
     dispatch(addCard({ id: id, toggle: toggle }));
+    // Toggle card base on the Card props status
     dispatch(cardToggle({ id: id, toggle: this.props.toggle }));
   }
 
@@ -32,20 +31,25 @@ class Card extends Component {
     let { id, toggle } = this.state;
     let this_card = cards.filter(card => card.id == id);
     this_card = this_card[0];
+    // for any update, chech this card state has changed
     if (toggle != this_card.toggle) {
       this.setState({ toggle: this_card.toggle });
     }
   }
 
   handleToggle(id) {
+    // Switch Toggle value of this card
     let { cards, dispatch } = this.props;
     let this_card = cards.filter(card => card.id == id);
     this_card = this_card[0];
     this_card.toggle = !this_card.toggle;
     dispatch(cardToggle(this_card));
-    this.setState({ first_toggled: true });
+    if (!this.state.first_toggled) {
+      this.setState({ first_toggled: true });
+    }
   }
   render() {
+    // Adding properties to the childes (Card Header, Card Body)
     let propedChildrens = this.props.children.map((child, index) => {
       if (child.type.name === "CardHeader") {
         return React.cloneElement(child, {

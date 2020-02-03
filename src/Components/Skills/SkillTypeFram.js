@@ -8,14 +8,15 @@ class SkillTypeFram extends Component {
   render() {
     let { state } = this.props;
     let { skills } = state.resume;
-    let specified_fields = skills.filter(skill => skill.filed !== "others"),
-      other_field = skills.filter(skill => skill.filed === "others");
+    // SEPARATE FIELDS CARDS FROM OTHERS CARD/
+    let fields = skills.filter(skill => skill.filed !== "others"),
+      others = skills.filter(skill => skill.filed === "others");
     return (
       <React.Fragment>
-        {specified_fields.map((skill, index) => (
+        {fields.map((skill, index) => (
           <Field key={index} name={skill.filed} data={skill.skills} />
         ))}
-        <Others name={other_field[0].name} list={other_field[0].list} />
+        <Others name={others[0].name} list={others[0].list} />
       </React.Fragment>
     );
   }

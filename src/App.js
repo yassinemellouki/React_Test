@@ -15,10 +15,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // FETCHING STATE DATA FROM API (FAKE API)
     let { dispatch } = this.props;
     axios
       .get("http://localhost:3000/resume")
       .then(res => {
+        // DESTAPCH DATA TO REDUX RESUME STORE
         dispatch(fetchData(res.data));
         this.setState({ fetched: true });
       })

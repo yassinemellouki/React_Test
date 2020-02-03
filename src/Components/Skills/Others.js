@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import SkillIcon from "../../img/icons/skills.svg";
-import StarIcon from "../../img/icons/star.svg";
-import SVG from "react-inlinesvg";
+import placingStars from "../Common/Funcions/PlacingStars";
 import PropTypes from "prop-types";
-import { Card, CardHeader, CardBody } from "../Card";
+import { Card, CardHeader, CardBody } from "../Common/Card";
 
 class Others extends Component {
   render() {
     let { list } = this.props;
-    const n = 5;
-    let is_float = false;
-    let floated = false;
     return (
       <div className="skill others col-md-6">
         <Card cardStyle="light">
@@ -33,37 +29,8 @@ class Others extends Component {
 
                     <div className="w-50 d-inline-block">
                       <span className="level">
-                        {[...Array(n)].map((e, i) => {
-                          let level = parseInt(item.level);
-                          let num_to_array = item.level.split(".");
-                          if (typeof num_to_array[1] == "string") {
-                            is_float = true;
-                          } else {
-                            is_float = false;
-                          }
-                          if (level > i) {
-                            return (
-                              <span className={"star star-filled"} key={i}>
-                                <SVG src={StarIcon} />
-                              </span>
-                            );
-                          } else if (is_float && !floated) {
-                            if (!floated) {
-                              floated = true;
-                              return (
-                                <span className="star star-half" key={i}>
-                                  <SVG src={StarIcon} />
-                                </span>
-                              );
-                            }
-                          } else {
-                            return (
-                              <span className="star star-not-filled" key={i}>
-                                <SVG src={StarIcon} />
-                              </span>
-                            );
-                          }
-                        })}
+                        {//RETURN A CLASSED SVG STARS ICONS BASED ON THE ITEM LEVEL VALUE
+                        placingStars(item.level)}
                       </span>
                     </div>
                   </li>

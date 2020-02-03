@@ -4,6 +4,7 @@ let initialState = {
 
 export default function appReducer(state = initialState, action) {
   let cards = state.cards;
+  // TOGGLE TERGETED CARD AND RETURN ALL THE CARDS
   function cardToggle({ id, toggle }) {
     let targetted_id = id;
     return cards.map(card => {
