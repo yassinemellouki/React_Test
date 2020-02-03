@@ -5,7 +5,7 @@ class Me extends Component {
   render() {
     // CRATE A NEW TAG ELEMENTS FOR THE SPLITED STRING NAME
     //split name string to array
-    let { name, specification } = this.props,
+    let { name, specification, classes } = this.props,
       splited_name = name.split(" "),
       //separate the odd indexed names from the even names
       odd_name_array = new Array(),
@@ -40,7 +40,7 @@ class Me extends Component {
       return { __html: html_name };
     }
     return (
-      <div className="who-am-i mb-4">
+      <div className={"who-am-i mb-4 " + classes}>
         <div className="my-name">
           <h1 dangerouslySetInnerHTML={NewNameComponent()}></h1>
         </div>
