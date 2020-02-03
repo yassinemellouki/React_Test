@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SVG from "react-inlinesvg";
 import SkillIcon from "../../img/icons/skills.svg";
 import PropTypes from "prop-types";
 import SkillType from "./SkillType";
@@ -10,11 +11,7 @@ class Skill extends Component {
       <div className="skill col-md-6 my-4">
         <div className="field-title mb-4">
           <h2>
-            <img
-              src={SkillIcon}
-              className="float-left mr-2"
-              alt="Skills Icon"
-            />
+            <SVG src={SkillIcon} className="header-icon float-left mr-2" />
             {name}
           </h2>
         </div>

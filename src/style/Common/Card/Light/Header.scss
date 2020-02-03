@@ -1,3 +1,10 @@
 .card-header {
   border: none !important;
+  .arrow-icon {
+    svg {
+      path {
+        fill: $main-col;
+      }
+    }
+  }
 }

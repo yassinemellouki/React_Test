@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SVG from "react-inlinesvg";
 import ArrowIconDark from "../../../img/icons/arrow-dark.svg";
 import ArrowIconLight from "../../../img/icons/arrow-light.svg";
 import PropTypes from "prop-types";
@@ -94,7 +95,7 @@ class CardHeader extends Component {
       <div className="card-header" onClick={this.props.handleToggle}>
         {this.props.children}
         <div className="arrow-icon">
-          <img
+          <SVG
             className={`arrow-icon icon-${toggle ? "down" : "up"}`}
             src={
               cardStyle == "light" || cardStyle == "default"

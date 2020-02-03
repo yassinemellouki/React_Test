@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SkillIcon from "../../img/icons/skills.svg";
+import SVG from "react-inlinesvg";
 import placingStars from "../Common/Funcions/PlacingStars";
 import PropTypes from "prop-types";
 import { Card, CardHeader, CardBody } from "../Common/Card";
@@ -12,11 +13,7 @@ class Others extends Component {
         <Card cardStyle="light">
           <CardHeader>
             <div className="field-title">
-              <img
-                src={SkillIcon}
-                className="float-left mr-2"
-                alt="Skills Icon"
-              />
+              <SVG src={SkillIcon} className="header-icon float-left mr-2" />
               <h3>Others</h3>
             </div>
           </CardHeader>
