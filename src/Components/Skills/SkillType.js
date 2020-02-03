@@ -25,7 +25,7 @@ class SkillType extends Component {
                 {list.map((item, index) => (
                   <li key={index}>
                     <span className="d-inline-block w-50">{item.name}</span>
-                    <div className="w-50 d-inline-block">
+                    <div className="w-50 level-wrapper d-inline-block">
                       <span className="level">
                         {//RETURN A CLASSED SVG STARS ICONS BASED ON THE ITEM LEVEL VALUE
                         placingStars(item.level)}

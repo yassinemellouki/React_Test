@@ -12,16 +12,18 @@
           padding-bottom: 0.6rem;
           margin-bottom: 0.4rem;
 
-          .star {
-            width: 1rem;
+          .level-wrapper {
+            .star {
+              width: 1rem;
 
-            svg {
-              width: 1.5rem;
+              svg {
+                width: 1.5rem;
 
-              .star,
-              .star-half,
-              .line {
-                fill: none;
+                .star,
+                .star-half,
+                .line {
+                  fill: none;
+                }
               }
             }
           }
