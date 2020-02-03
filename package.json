@@ -7,9 +7,9 @@
     "build": "npm run clean && webpack --mode production",
     "clean": "rimraf public",
     "dev": "webpack-dev-server",
-    "prod": "live-server public/",
+    "prod": "webpack",
     "json-server": "json-server --watch src/API/jsonData.json",
-    "live-prod": "npm run json-server & npm run prod",
+    "live-prod": "npm run json-server & npm run prod & live-server public/",
     "live-dev": "npm run json-server & npm run dev"
   },
   "author": "Yassine Mellouki",

@@ -19,7 +19,7 @@ This command will run a fake JSON API, which can be run individually (`npm run j
 To run production mode simply run this command:
 `npm run live-prod`
 
-This command will run a fake JSON API, which can be run individually (`npm run json-server`). also the webpack build command which can be run individually (`npm run prod`)
+This command will run a fake JSON API, which can be run individually (`npm run json-server`), then the webpack build command which can be run individually (`npm run prod`). finally will run a live server for the generated 'public' folder.
 
 ## Important
 
