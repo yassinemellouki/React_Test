@@ -1,4 +1,4 @@
-## Oververview
+## Overview
 
 React/Redux resume app built using webpack bundler, SASS and SVG.
 
