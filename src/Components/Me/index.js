@@ -54,6 +54,7 @@ class Me extends Component {
 
 Me.propTypes = {
   name: PropTypes.string,
+  classes: PropTypes.string,
   specification: PropTypes.string
 };
 
