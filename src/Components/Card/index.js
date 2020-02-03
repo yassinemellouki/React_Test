@@ -20,6 +20,9 @@ class Card extends Component {
   componentDidMount() {
     let { dispatch } = this.props;
     let { id, toggle } = this.state;
+    if (this.props.toggle) {
+      this.setState({ first_toggled: true });
+    }
     dispatch(addCard({ id: id, toggle: toggle }));
     dispatch(cardToggle({ id: id, toggle: this.props.toggle }));
   }
@@ -63,7 +66,14 @@ class Card extends Component {
     let card_style = cardStyle !== undefined ? cardStyle : "default";
 
     return (
-      <div className={"card card-" + card_style} data-tggole={toggle}>
+      <div
+        className={
+          "card card-" +
+          card_style +
+          (this.state.first_toggled ? " first-toggled" : "")
+        }
+        data-tggole={toggle}
+      >
         {propedChildrens}
       </div>
     );

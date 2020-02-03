@@ -3,6 +3,10 @@
   color: white;
   margin-bottom: 0.2rem;
 
+  &.first-toggled {
+    @import "./SVGAnimations.scss";
+  }
+
   @import "./Common/";
 
   &.card-dark,

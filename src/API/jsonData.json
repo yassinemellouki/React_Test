@@ -63,7 +63,7 @@
             "type": "Framworks & Libraries",
             "list": [
               { "name": "BOOTSTRAP", "level": "4" },
-              { "name": "REACT/REDUX", "level": "3.5" }
+              { "name": "REACT/REDUX", "level": "3" }
             ]
           },
           {

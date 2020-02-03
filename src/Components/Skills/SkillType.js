@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import StarIcon from "../../img/icons/star.svg";
 import SVG from "react-inlinesvg";
 import PropTypes from "prop-types";
@@ -8,7 +9,7 @@ class SkillType extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      is_first_toggle: true
+      show: false
     };
   }
   render() {
@@ -27,40 +28,42 @@ class SkillType extends Component {
               <ul>
                 {list.map((item, index) => (
                   <li key={index}>
-                    <span className="d-inline-block">{item.name}</span>
-                    <span className="level">
-                      {[...Array(n)].map((e, i) => {
-                        let level = parseInt(item.level);
-                        let num_to_array = item.level.split(".");
-                        if (typeof num_to_array[1] == "string") {
-                          is_float = true;
-                        } else {
-                          is_float = false;
-                        }
-                        if (level > i + 1) {
-                          return (
-                            <span className="star star-filled" key={i}>
-                              <SVG src={StarIcon} />
-                            </span>
-                          );
-                        } else if (is_float && !floated) {
-                          if (!floated) {
-                            floated = true;
+                    <span className="d-inline-block w-50">{item.name}</span>
+                    <div className="w-50 d-inline-block">
+                      <span className="level">
+                        {[...Array(n)].map((e, i) => {
+                          let level = parseInt(item.level);
+                          let num_to_array = item.level.split(".");
+                          if (typeof num_to_array[1] == "string") {
+                            is_float = true;
+                          } else {
+                            is_float = false;
+                          }
+                          if (level > i) {
                             return (
-                              <span className="star star-half" key={i}>
+                              <span className={"star star-filled"} key={i}>
+                                <SVG src={StarIcon} />
+                              </span>
+                            );
+                          } else if (is_float && !floated) {
+                            if (!floated) {
+                              floated = true;
+                              return (
+                                <span className="star star-half" key={i}>
+                                  <SVG src={StarIcon} />
+                                </span>
+                              );
+                            }
+                          } else {
+                            return (
+                              <span className="star star-not-filled" key={i}>
                                 <SVG src={StarIcon} />
                               </span>
                             );
                           }
-                        } else {
-                          return (
-                            <span className="star star-not-filled" key={i}>
-                              <SVG src={StarIcon} />
-                            </span>
-                          );
-                        }
-                      })}
-                    </span>
+                        })}
+                      </span>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -78,4 +81,8 @@ SkillType.propTypes = {
   list: PropTypes.array
 };
 
-export default SkillType;
+function mapStateToProps(state) {
+  return { cards: state.app.cards };
+}
+
+export default connect(mapStateToProps)(SkillType);

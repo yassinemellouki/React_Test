@@ -1,0 +1,43 @@
+.star {
+  //display: none;
+}
+
+.star-filled {
+  .line {
+    animation: move_lines 0.8s 0.2s forwards;
+  }
+
+  @keyframes move_lines {
+    98% {
+      transform: translate(0);
+    }
+
+    100% {
+      display: none;
+    }
+  }
+}
+
+.star-half {
+  .line-3,
+  .line-4,
+  .line-5 {
+    animation: move_lines 0.8s 0.2s forwards;
+  }
+
+  @keyframes move_lines {
+    98% {
+      transform: translate(0);
+    }
+
+    100% {
+      display: none;
+    }
+  }
+}
+
+.star-not-filled {
+  .line {
+    display: none;
+  }
+}

@@ -1,2 +1,39 @@
 .card-body {
+  .star-filled {
+    .line {
+      path {
+        fill: $white;
+      }
+    }
+
+    svg {
+      .star {
+        fill: $white !important;
+      }
+    }
+  }
+
+  .star-half {
+    .line-3,
+    .line-4,
+    .line-5 {
+      path {
+        fill: $white;
+      }
+    }
+
+    svg {
+      .star-half {
+        fill: $white !important;
+      }
+    }
+  }
+
+  .star-not-filled {
+    svg {
+      .star {
+        fill: rgba($light-gray, 0.5) !important;
+      }
+    }
+  }
 }

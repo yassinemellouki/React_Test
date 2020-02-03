@@ -5,7 +5,7 @@
         list-style: none;
         padding-right: 0.8rem;
         font: {
-          size: calculate_rem(14px);
+          size: 1rem;
         }
 
         li {
@@ -16,80 +16,12 @@
             width: 1rem;
 
             svg {
-              width: 1rem;
+              width: 1.5rem;
 
               .star,
               .star-half,
               .line {
                 fill: none;
-              }
-            }
-
-            &.animated {
-              &.star-filled {
-                .line {
-                  path {
-                    fill: $white;
-                  }
-
-                  animation: move_lines 0.4s forwards;
-                }
-
-                @keyframes move_lines {
-                  98% {
-                    transform: translate(0);
-                  }
-
-                  100% {
-                    display: none;
-                  }
-                }
-
-                svg {
-                  .star {
-                    fill: $white;
-                  }
-                }
-              }
-
-              &.star-half {
-                .line-3,
-                .line-4,
-                .line-5 {
-                  path {
-                    fill: $white;
-                  }
-
-                  animation: move_lines 0.4s forwards;
-                }
-
-                @keyframes move_lines {
-                  98% {
-                    transform: translate(0);
-                  }
-
-                  100% {
-                    display: none;
-                  }
-                }
-
-                svg {
-                  .star-half {
-                    fill: $white;
-                  }
-                }
-              }
-
-              &.star-not-filled {
-                .line {
-                  display: none;
-                }
-
-                svg {
-                  .star {
-                    fill: rgba($light-gray, 0.5);
-                  }
-                }
               }
             }
           }
