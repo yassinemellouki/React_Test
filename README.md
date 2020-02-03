@@ -16,11 +16,11 @@ This command will run a fake JSON API, which can be run individually (`npm run j
 
 ## Production
 
-To run develoment mode simply run this command:
+To run production mode simply run this command:
 `npm run live-prod`
 
 This command will run a fake JSON API, which can be run individually (`npm run json-server`). also the webpack build command which can be run individually (`npm run prod`)
 
 ## Important
 
-It's important to run the both commands (json-server and dev server or bundler command) so the application can fetch data form the JSON API or it will throw an error to the console.
+It's important to run the both commands (json-server and dev server or bundler command) so the application can fetch data form the - fake - JSON API or it will throw an error to the console.
