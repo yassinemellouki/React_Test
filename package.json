@@ -10,7 +10,8 @@
     "prod": "webpack",
     "json-server": "json-server --watch src/API/jsonData.json",
     "live-prod": "npm run json-server & npm run prod & live-server public/",
-    "live-dev": "npm run json-server & npm run dev"
+    "live-dev": "npm run json-server & npm run dev",
+    "lint": "eslint src/ & stylelint src/style"
   },
   "author": "Yassine Mellouki",
   "license": "ISC",

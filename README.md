@@ -24,3 +24,9 @@ This command will run a fake JSON API, which can be run individually (`npm run j
 ## Important
 
 It's important to run the both commands (json-server and dev server or bundler command) so the application can fetch data form the - fake - JSON API or it will throw an error to the console.
+
+## Eslint & Stylelint Test
+
+`npm run lint`
+
+to analyze code from errors, bugs, stylistic errors.
