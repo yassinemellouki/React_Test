@@ -1,8 +1,8 @@
-## Overview
+# Overview
 
 React/Redux resume app built using webpack bundler, SASS and SVG.
 
-# Getting started
+## Getting started
 
 - Clone this repo
 - `npm install` to install all required dependencies.
