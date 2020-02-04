@@ -1,13 +1,10 @@
 @import "./style/Common";
-
-body {
-  @import "./style/Components/Loading/";
-  @import "./style/Components/Header/";
-  @import "./style/Components/About/";
-  @import "./style/Components/Education/";
-  @import "./style/Components/Me/";
-  @import "./style/Components/Experiences/";
-  @import "./style/Components/Skills/";
-  @import "./style/Components/Interestes/";
-  @import "./style/Components/Footer/";
-}
+@import "./style/Components/Loading/";
+@import "./style/Components/Header/";
+@import "./style/Components/About/";
+@import "./style/Components/Education/";
+@import "./style/Components/Me/";
+@import "./style/Components/Experiences/";
+@import "./style/Components/Skills/";
+@import "./style/Components/Interestes/";
+@import "./style/Components/Footer/";

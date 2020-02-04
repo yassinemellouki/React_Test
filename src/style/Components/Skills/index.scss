@@ -1,57 +1,55 @@
 .skills {
-  .skills-list {
-    .list {
-      ul {
-        list-style: none;
-        padding-right: 0.8rem;
-        font: {
-          size: 1rem;
-        }
+  .list {
+    ul {
+      list-style: none;
+      padding-right: 0.8rem;
+      font: {
+        size: 1rem;
+      }
 
-        li {
-          padding-bottom: 0.6rem;
-          margin-bottom: 0.4rem;
+      li {
+        padding-bottom: 0.6rem;
+        margin-bottom: 0.4rem;
 
-          .level-wrapper {
-            .star {
-              margin-right: 0.2rem;
-              width: 1rem;
+        .level-wrapper {
+          .star {
+            margin-right: 0.2rem;
+            width: 1rem;
 
-              svg {
-                width: 1.5rem;
+            svg {
+              width: 1.5rem;
 
-                .star,
-                .star-half,
-                .line {
-                  fill: none;
-                }
+              .star,
+              .star-half,
+              .line {
+                fill: none;
               }
             }
           }
         }
       }
     }
+  }
 
-    .field-title {
-      .header-icon {
-        width: 2.2rem;
-        height: 2rem;
+  .field-title {
+    .header-icon {
+      width: 2.2rem;
+      height: 2rem;
+    }
+
+    color: $main-col;
+  }
+
+  .filed {
+    .title {
+      text-transform: uppercase !important;
+      font: {
+        size: calculate_rem(15px);
       }
-
-      color: $main-col;
     }
+  }
 
-    .filed {
-      .title {
-        text-transform: uppercase !important;
-        font: {
-          size: calculate_rem(15px);
-        }
-      }
-    }
-
-    .others {
-      //empty
-    }
+  .others {
+    //empty
   }
 }
