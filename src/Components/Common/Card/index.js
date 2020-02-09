@@ -111,6 +111,18 @@ class CardHeader extends Component {
 }
 
 class CardBody extends Component {
+  constructor(props) {
+    super(props);
+    this.card_body = React.createRef();
+  }
+  componentDidMount() {
+    // Sign default Hight of .card-body Elements
+    let card_body = this.card_body;
+    if (card_body.current) {
+      let height_value = card_body.current.clientHeight;
+      card_body.current.style.height = height_value + "px";
+    }
+  }
   render() {
     let visibility;
     let collapsing = "";
@@ -122,7 +134,10 @@ class CardBody extends Component {
     }
 
     return (
-      <div className={"card-body " + collapsing + visibility}>
+      <div
+        ref={this.card_body}
+        className={"card-body " + collapsing + visibility}
+      >
         {this.props.children}
       </div>
     );
