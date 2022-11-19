@@ -25,10 +25,10 @@
     "css-loader": "^3.0.0",
     "eslint": "^6.0.1",
     "eslint-plugin-react": "^7.18.0",
-    "favicons-webpack-plugin": "0.0.9",
+    "favicons-webpack-plugin": "6.0.0-alpha.2",
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "json-server": "^0.15.1",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.7.0",
@@ -42,7 +42,7 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.14.2",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
